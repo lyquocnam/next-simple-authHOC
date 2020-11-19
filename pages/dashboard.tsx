@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import withAuthorized from "../libs/with-authorized";
 
-const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
+const DashboardPage = () => (
+  <Layout title="Dashboard | Next.js + TypeScript Example">
+    <h1>Dashboard</h1>
     <p>
       <Link href="/">
         <a>Go home</a>
@@ -13,4 +13,4 @@ const AboutPage = () => (
   </Layout>
 )
 
-export default AboutPage
+export default withAuthorized(DashboardPage);
